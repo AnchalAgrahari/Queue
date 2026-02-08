@@ -1,0 +1,13 @@
+from collections import deque 
+class stack:
+    
+    def __init__(self):
+        self.q1 = deque()
+        self.q2 = deque()
+
+    def push (self,x):
+        self.q2.append(x)          ## push x in empty q2
+
+        while len(self.q1) != 0:
+            self.q2.append(self.q1[0])
+            self.q1popleft()
