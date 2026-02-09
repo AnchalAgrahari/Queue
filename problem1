@@ -1,13 +1,83 @@
-from collections import deque 
-class stack:
+# from collections import deque 
+# class stack:
     
+#     def __init__(self):
+#         self.q1 = deque()
+#         self.q2 = deque()
+
+#     def push (self,x):
+#         self.q2.append(x)          ## push x in empty q2
+
+#         while self.q1:
+#             self.q2.append(self.q1.popleft())
+#             # self.q1.popleft()
+#         self.q1, self.q2 = self.q2, self.q1
+
+#     def pop (self):
+#         if not self.q1:
+#             return -1
+#         self.q1.popleft()
+    
+#     def top(self):
+#         if len (self.q1) == 0:
+#             return -1
+#         return self.q1[0]
+    
+#     def size(self):
+#         return len(self.q1)
+    
+# if __name__ == '__main__':
+#     sl = stack()
+#     sl.push(1)
+#     sl.push(7)
+#     sl.push(2)
+
+#     print(sl.top())
+#     sl.pop()
+#         # print(sl.top())
+#         # sl.pop()
+#         # print(sl.top())
+    
+#         # print(sl.size())
+
+
+
+from collections import deque
+
+class Stack:
+
     def __init__(self):
         self.q1 = deque()
         self.q2 = deque()
 
-    def push (self,x):
-        self.q2.append(x)          ## push x in empty q2
+    def push(self, x):
+        self.q2.append(x)
 
-        while len(self.q1) != 0:
-            self.q2.append(self.q1[0])
-            self.q1popleft()
+        while self.q1:
+            self.q2.append(self.q1.popleft())
+
+        self.q1, self.q2 = self.q2, self.q1
+
+    def pop(self):
+        if not self.q1:
+            return -1
+        return self.q1.popleft()
+
+    def top(self):
+        if not self.q1:
+            return -1
+        return self.q1[0]
+
+    def size(self):
+        return len(self.q1)
+
+
+if __name__ == "__main__":
+    sl = Stack()
+    sl.push(1)
+    sl.push(7)
+    sl.push(2)
+
+    print(sl.top())   # 2
+    sl.pop()
+    print(sl.top())   # 7
