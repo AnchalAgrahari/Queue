@@ -1,0 +1,11 @@
+// Driver Code
+
+let q = [];
+
+// inserting elements at rear
+q.push(1);
+q.push(8);
+q.push(3);
+
+// deleting element from front
+q.shift();
