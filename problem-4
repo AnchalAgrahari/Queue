@@ -10,16 +10,16 @@ class myStack {
     }
 
     // remove top element
-    pop() {
-        if (this.q1.length === 0)
-            return;
+    // pop() {
+    //     if (this.q1.length === 0)
+    //         return;
 
-        while (this.q1.length !== 1) {
-            this.q2.push(this.q1.shift());
-        }
-        this.q1.shift();
-        [this.q1, this.q2] = [this.q2, this.q1];
-    }
+    //     while (this.q1.length !== 1) {
+    //         this.q2.push(this.q1.shift());
+    //     }
+    //     this.q1.shift();
+    //     [this.q1, this.q2] = [this.q2, this.q1];
+    // }
 
     // return top element
     top() {
