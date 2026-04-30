@@ -34,11 +34,11 @@ if __name__ == '__main__':
 
     print(sl.top())
     sl.pop()
-        # print(sl.top())
-        # sl.pop()
-        # print(sl.top())
+    print(sl.top())
+    sl.pop()
+    print(sl.top())
     
-        # print(sl.size())
+    print(sl.size())
 
 
 
