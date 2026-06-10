@@ -78,6 +78,6 @@ if __name__ == '__main__':
 #     sl.push(7)
 #     sl.push(2)
 
-#     print(sl.top())   # 2
-#     sl.pop()
-#     print(sl.top())   # 7
+     print(sl.top())   # 2
+     sl.pop()
+     print(sl.top())   # 7
